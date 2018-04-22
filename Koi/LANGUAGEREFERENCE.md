@@ -10,12 +10,17 @@ pro MyProcedure({parameters*}) {}
 ### Functions
 A function can be called with a defined set of parameters. The parameter names, types and optional values are defined with the functions and the values are defined when the function is called.
 ```
-fun add({parameters*}) {}
+fun MyFunction({parameters*}) {}
 ```
 ### Methods
 A method is a function that belongs to a class, they have their own scope but can also work with the class scope.
 ```
 met MyMethod({parameters*}) {}
+```
+### Parameters
+Parameters are used in sub-routine declaration and are then used from the sub-routine. The type and default value of a parameter are optional.
+```
+{id} -> {type}: {default value}
 ```
 ## Classes
 ```
@@ -45,4 +50,10 @@ public {}
 The static block exists only with-in a private or public block and is used to define static variables and methods.
 ```
 static {}
+```
+## Variables
+Variables are names that are attached to values. The variables available depend on the current scope. Variables can be defined as mutable with "`var`" or as final with "`val`". The type and value of the variable is optional (variables will equal `none` if not given a value).
+```
+var myVar -> {type}: {value}
+val myVal -> {type}: {value}
 ```
