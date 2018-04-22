@@ -5,7 +5,7 @@ When the implementation of Koi contains all parts of a version, it is now consid
 
 The version scheme is based on semantic versioning; major, minor, patch.
 
-## Koi 1.~.0
+## Koi 1.\~.0
 #### Will contain:
 - Booleans
 - Characters
@@ -29,7 +29,7 @@ The version scheme is based on semantic versioning; major, minor, patch.
 - Functions
 - Imports
 
-## Koi ~.~.0
+## Koi \~.\~.0
 #### Will contain:
 - Integer Ranges
 - Object Rough Ranges
