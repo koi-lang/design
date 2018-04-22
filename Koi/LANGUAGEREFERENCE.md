@@ -48,3 +48,33 @@ Variables are names that are attached to values. The variables available depend 
 var myVar -> {type}: {value}
 val myVal -> {type}: {value}
 ```
+## Statements
+### If
+An if statement is used to compare values with others. An if statement can optionally be followed by an elf and/or else statements.
+```
+if ({value} {comparison operator} {value}) {}
+```
+#### Elf
+An elf statement can only follow an if statement, and is run if the comparison in the if statement is false, but its' comparison is true.
+```
+if (...) {}
+elf ({value} {comparison operator} {value}) {}
+```
+#### Else
+An else statement can only follow an if or elf statement, and is run if the comparison in the if or elf statements were false.
+```
+if (...) {}
+elf (...) {}
+else {}
+```
+## Loops
+### For
+For loops will loop for as long as there is another item in the given object with length, the value of the given id will be set to the value of the current item in the object with length.
+```
+for ({id} in {object with length}) {}
+```
+### While
+A while loop will loop for as long as the comparison is true. As soon as it isn't, the loop will stop.
+```
+while ({value} {comparison operator} {value}) {}
+```
