@@ -24,17 +24,7 @@ Parameters are used in sub-routine declaration and are then used from the sub-ro
 ```
 ## Classes
 ```
-class MyClass({extensions*, implementations*}) {}
-```
-### Extends Block
-The extends block exists only with-in a class and is used to define the classes the host class extends from. If any classes contain the same method signatures, the methods in the last will be used.
-```
-extends {}
-```
-### Implements Block
-The implements block exists only with-in a class and is used to define the interfaces the host class implements from. If any interfaces contain the same method signatures, the methods in the last will be used.
-```
-implements {}
+class MyClass({extensions*}) {}
 ```
 ### Private Block
 The private block exists only with-in a class and is used to define private variables and methods.
