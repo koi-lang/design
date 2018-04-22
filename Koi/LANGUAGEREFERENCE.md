@@ -23,6 +23,7 @@ Parameters are used in sub-routine declaration and are then used from the sub-ro
 {id} -> {type}: {default value}
 ```
 ## Classes
+Classes are objects that can contain variables and methods. Classes can be extended from other classes, carrying over the extended classes' variables and methods. Methods from the extended classes' can then be overridden in the new class.
 ```
 class MyClass({extensions*}) {}
 ```
