@@ -22,6 +22,7 @@ Parameters are used in sub-routine declaration and are then used from the sub-ro
 ```
 {id} -> {type}: {default value}
 ```
+
 ## Classes
 Classes are objects that can contain variables and methods. Classes can be extended from other classes, carrying over the extended classes' variables and methods. Methods from the extended classes' can then be overridden in the new class.
 ```
@@ -42,12 +43,14 @@ The static block exists only with-in a private or public block and is used to de
 ```
 static {}
 ```
+
 ## Variables
 Variables are names that are attached to values. The variables available depend on the current scope. Variables can be defined as mutable with "`var`" or as final with "`val`". The type and value of the variable is optional (variables will equal `none` if not given a value).
 ```
 var myVar -> {type}: {value}
 val myVal -> {type}: {value}
 ```
+
 ## Statements
 ### If
 An if statement is used to compare values with others. An if statement can optionally be followed by an elf and/or else statements.
@@ -67,6 +70,7 @@ if (...) {}
 elf (...) {}
 else {}
 ```
+
 ## Loops
 ### For
 For loops will loop for as long as there is another item in the given object with length, the value of the given id will be set to the value of the current item in the object with length.
@@ -78,6 +82,7 @@ A while loop will loop for as long as the comparison is true. As soon as it isn'
 ```
 while ({boolean}) {}
 ```
+
 ## Operators
 ### Comparison
 Comparison operators can be used to compare two values and return a boolean.
