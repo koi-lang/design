@@ -20,7 +20,7 @@ The version scheme is based on semantic versioning; major, minor, patch.
 - If Statements
 - Comparison Expressions
 - For Loops
-- While Statements
+- While Loops
 - Print Functions
 - Input Functions
 

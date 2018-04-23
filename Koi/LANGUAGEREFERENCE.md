@@ -19,8 +19,24 @@ met MyMethod({parameters*}) {}
 ```
 ### Parameters
 Parameters are used in sub-routine declaration and are then used from the sub-routine. The type and default value of a parameter are optional.
+
+The most basic form of a parameter is just an ID.
 ```
+{id}
+```
+However, the type of the parameter may also be specified.
+```
+{id} -> {type}
+```
+A default value for the parameter can be defined, either on its' own or with the type.
+```
+{id}: {default value}
 {id} -> {type}: {default value}
+```
+The last parameter may also have an asterisk before the ID, making that parameter into a list of the given type. The parameter will now no longer be able to accept a default value. The function call will now accept an endless amount of values, with the extra values being passed into the parameter with an asterisk.
+```
+*{id}
+*{id} -> {type}
 ```
 
 ## Classes
