@@ -50,3 +50,52 @@ An array is a multitude of values.
 ## Standard
 ### Math
 ### JSON
+### YAML
+### XML
+### Random
+### OS
+### IO
+### Regex
+### Date
+**Functions:**
+- `currentDate`
+    - Parameters:
+        - `format` - String: The format to use.
+    - Returns: The current date.
+### Time
+**Functions:**
+- `currentTime`
+    - Parameters:
+        - `format` - String: The format to use.
+    - Returns: The current time.
+### Zip
+### GZip
+### Base32
+### Base64
+### Binary
+### Hexadecimal
+### i18n
+### UUID
+### SQL
+### Image
+### Sound
+### Logging
+**Classes:**
+- `Logger`
+    - Methods:
+        - `log`
+            - Parameters:
+                - `content` - String: The content to log.
+                - `type` - String: The kind of log this is.
+        - `info`
+            - Parameters:
+                - `content` - String: The content to log.
+        - `warn`
+            - Parameters:
+                - `content` - String: The content to log.
+### Event
+**Classes:**
+- `EventCreator`
+- `EventListener`
+### Build
+### Threading
