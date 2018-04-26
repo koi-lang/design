@@ -2,15 +2,26 @@
 The Koi programming language.
 
 ## Keywords
-- `true`
-- `false`
-- `var`
-- `none`
-- `char`
-- `str`
-- `int`
-- `float`
-- `bool`
+- `true` - Boolean
+- `false` - Boolean
+- `var` - Variable Assignment
+- `none` - Nothing
+- `char` - Character
+- `str` - String
+- `int` - Integer
+- `float` - Float
+- `bool` - Bool
+- `if` - If
+- `elf` - Else If
+- `else` - Else
+- `for` - For
+- `in` - In
+- `while` - While
+- `fun` - Function
+- `pro` - Procedure
+- `met` - Method
+- `class` - Class
+- `object` - Object
 
 ## Symbols
 - `+` - Addition
@@ -18,9 +29,12 @@ The Koi programming language.
 - `*` - Multiply/Endless Value Parameter
 - `/` - Divide
 - `:` - Value Assignment
-- `.`
+- `.` - Object Accessor
+- `..` - Range
+- `@` - Reverse Object Accessor
 - `"` - Non-Literal String
 - `'` - Literal String
+- Backtick - Multi-line String
 - `()` - Function Call/Class Constructor
 - `,` - Parameter Separation
 - `=` - Equal Comparison
@@ -67,4 +81,15 @@ fun HelloAll(*names -> String) {
 variable_assignment.koi
 ```
 var myVar: "A string."
+```
+
+for_loop.koi
+```
+for (i in 5..10) {
+    println(i)
+}
+
+for (i in 1..10, j in 5..7) {
+    println(i, j)
+}
 ```

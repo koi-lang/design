@@ -93,6 +93,10 @@ For loops will loop for as long as there is another item in the given object wit
 ```
 for ({id} in {object with length}) {}
 ```
+For loops can also be used to loop through multiple things, using commas for each loop.
+```
+for ({id} in {object with length}, {id} in {object with length}) {}
+```
 ### While
 A while loop will loop for as long as the comparison is true. As soon as it isn't, the loop will stop.
 ```
