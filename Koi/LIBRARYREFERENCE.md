@@ -4,6 +4,16 @@ The library reference for the Koi language.
 Methods not marked as overridable can't be overrided.
 
 ## Core
+### Functions
+- `print` - Prints given data
+- `println` - Prints given data and a newline
+- `input` - Accepts user input
+- `inputln` - Accepts user input and adds a newline
+- `int` - Converts type to an integer
+- `str` - Converts type to a string
+- `char` - Converts type to a char
+- `float` - Converts type to a float
+- `bool` - Converts type to a bool
 ### Types
 #### Value
 A value is an object that contains its' own value.
@@ -43,11 +53,8 @@ A string is an array of characters.
 #### Array
 An array is a multitude of values.
 
-### IO
-
-**Extends From:** Reference
-
 ## Standard
+### Sandbox
 ### Math
 ### JSON
 ### YAML

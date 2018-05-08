@@ -1,21 +1,82 @@
 # Koi
 The language reference for the Koi language.
 
+## Keywords
+- `true` - Boolean
+- `false` - Boolean
+- `var` - Variable Assignment
+- `none` - Nothing
+- `char` - Character
+- `str` - String
+- `int` - Integer
+- `float` - Float
+- `bool` - Bool
+- `if` - If
+- `elf` - Else If
+- `else` - Else
+- `for` - For
+- `in` - In
+- `while` - While
+- `fun` - Function
+- `pro` - Procedure
+- `met` - Method
+- `class` - Class
+- `object` - Object
+- `pub` - Public
+- `pri` - Private
+- `sta` - Static
+
+## Symbols
+- `+` - Addition
+- `-` - Subtraction
+- `*` - Multiply/Endless Value Parameter
+- `/` - Divide
+- `=` - Value Assignment
+- `.` - Object Accessor
+- `..` - Range
+- `@` - Reverse Object Accessor/Attributes
+- `"` - Non-Literal String
+- `'` - Literal String
+- Backtick - Multi-line String
+- `()` - Function Call/Class Constructor
+- `,` - Parameter Separation
+- `=` - Equal Comparison
+- `!` - Not/Ignores Keyword
+- `<` - Less Than
+- `>` - More Than/Return Type
+- `^` - Throw Error
+- `:` - Type Assignment/Ratio
+- `£` - Pounds
+- `$` - Dollars
+- `€` - Euros
+
+## File Extensions
+Koi, unlike other languages, uses different file extensions for its' files. Different extensions are not needed, but are there to help identify what the file contains before it is opened.
+- `kd` - Koi Document (any piece of code outside of a class, function, etc, or multiple types, a function and a class)
+- `ks` - Koi Sub-Routine (optionally used instead of specific sub-routine extensions)
+- `kp` - Koi Procedure (used for files that contain just a procedure)
+- `kf` - Koi Function (used for files that contain just a function)
+- `kc` - Koi Class (used for files that contain just a class)
+- `kr` - Koi Reference (used for for out-of-code documentation)
+
 ## Sub-Routines
 ### Procedures
 A procedure is function that works in with the global scope.
 ```
-pro MyProcedure({parameters*}) {}
+pro MyProcedure({parameters*}) {block}
+pro MyReturn({parameters*}): {type} {block}
 ```
 ### Functions
 A function can be called with a defined set of parameters. The parameter names, types and optional values are defined with the functions and the values are defined when the function is called.
 ```
-fun MyFunction({parameters*}) {}
+fun MyFunction({parameters*}) {block}
+fun MyReturn({parameters*}): {type} {block}
 ```
 ### Methods
 A method is a function that belongs to a class, they have their own scope but can also work with the class scope.
 ```
-met MyMethod({parameters*}) {}
+met MyMethod({parameters*}) {block}
+met MyReturn({parameters*}): {type} {block}
 ```
 ### Parameters
 Parameters are used in sub-routine declaration and are then used from the sub-routine. The type and default value of a parameter are optional.
@@ -26,45 +87,30 @@ The most basic form of a parameter is just an ID.
 ```
 However, the type of the parameter may also be specified.
 ```
-{id} -> {type}
+{id}: {type}
 ```
 A default value for the parameter can be defined, either on its' own or with the type.
 ```
-{id}: {default value}
-{id} -> {type}: {default value}
+{id} = {default value}
+{id}: {type} = {default value}
 ```
 The last parameter may also have an asterisk before the ID, making that parameter into a list of the given type. The parameter will now no longer be able to accept a default value. The function call will now accept an endless amount of values, with the extra values being passed into the parameter with an asterisk.
 ```
 *{id}
-*{id} -> {type}
+*{id}: {type}
 ```
 
 ## Classes
 Classes are objects that can contain variables and methods. Classes can be extended from other classes, carrying over the extended classes' variables and methods. Methods from the extended classes' can then be overridden in the new class.
 ```
-class MyClass({extensions*}) {}
-```
-### Private Block
-The private block exists only with-in a class and is used to define private variables and methods.
-```
-private {}
-```
-### Public Block
-The public block exists only with-in a class and is used to define public variables and methods.
-```
-public {}
-```
-### Static Block
-The static block exists only with-in a private or public block and is used to define static variables and methods.
-```
-static {}
+class MyClass({extensions*}) {block}
 ```
 
 ## Variables
 Variables are names that are attached to values. The variables available depend on the current scope. Variables can be defined as mutable with "`var`" or as final with "`val`". The type and value of the variable is optional (variables will equal `none` if not given a value).
 ```
-var myVar -> {type}: {value}
-val myVal -> {type}: {value}
+var myVar: {type} = {value}
+val myVal: {type} = {value}
 ```
 
 ## Statements
