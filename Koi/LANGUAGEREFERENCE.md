@@ -23,7 +23,7 @@ The language reference for the Koi language.
 - `class` - Class
 - `object` - Object
 - `pub` - Public
-- `priv` - Private
+- `prv` - Private
 - `extern` - External/Static
 - `intern` - Internal/Protected
 
