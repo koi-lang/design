@@ -11,9 +11,9 @@ Methods not marked as overridable can't be overrided.
 - `inputln` - Accepts user input and adds a newline
 - `int` - Converts type to an integer
 - `str` - Converts type to a string
-- `char` - Converts type to a char
-- `float` - Converts type to a float
-- `bool` - Converts type to a bool
+- `cha` - Converts type to a char
+- `flo` - Converts type to a float
+- `boo` - Converts type to a bool
 ### Types
 #### Value
 A value is an object that contains its' own value.

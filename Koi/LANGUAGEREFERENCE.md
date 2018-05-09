@@ -6,11 +6,11 @@ The language reference for the Koi language.
 - `false` - Boolean
 - `var` - Variable Assignment
 - `none` - Nothing
-- `char` - Character
+- `cha` - Character
 - `str` - String
 - `int` - Integer
-- `float` - Float
-- `bool` - Bool
+- `flo` - Float
+- `boo` - Bool
 - `if` - If
 - `elf` - Else If
 - `else` - Else
@@ -19,12 +19,13 @@ The language reference for the Koi language.
 - `while` - While
 - `fun` - Function
 - `pro` - Procedure
-- `met` - Method
+- `meth` - Method
 - `class` - Class
 - `object` - Object
 - `pub` - Public
-- `pri` - Private
-- `sta` - Static
+- `priv` - Private
+- `extern` - External/Static
+- `intern` - Internal/Protected
 
 ## Symbols
 - `+` - Addition
