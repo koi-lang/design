@@ -26,13 +26,23 @@ The language reference for the Koi language.
 - `prv` - Private
 - `extern` - External/Static
 - `intern` - Internal/Protected
+- `pass` - Pass
+- `return` - Return
+- `continue` - Continue
 
 ## Symbols
 - `+` - Addition
 - `-` - Subtraction
 - `*` - Multiply/Endless Value Parameter
 - `/` - Divide
+- `//` - Float Division
 - `=` - Value Assignment
+- `=+` - Equals Plus
+- `=-` - Equals Minus
+- `=*` - Equals Multiply
+- `=/` - Equals Divide
+- `=//` - Equals Float Divide
+- `~` - Roughly
 - `.` - Object Accessor
 - `..` - Range
 - `@` - Reverse Object Accessor/Attributes
@@ -41,7 +51,12 @@ The language reference for the Koi language.
 - Backtick - Multi-line String
 - `()` - Function Call/Class Constructor
 - `,` - Parameter Separation
-- `=` - Equal Comparison
+- `==` - Equal To
+- `<=` - Less Than Or Equal To
+- `>=` - More Than Or Equal To
+- `<>` - Less Than Or More Than
+- `<=>` - Less Than Or Equal To Or More Than
+- `!=` - Not Equal To
 - `!` - Not/Ignores Keyword
 - `<` - Less Than
 - `>` - More Than/Return Type
