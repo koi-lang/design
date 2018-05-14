@@ -31,6 +31,7 @@ The language reference for the Koi language.
 - `continue` - Continue
 - `readly` - Read-Only
 - `writely` - Write-Only
+- `magic` - Magic
 
 ## Symbols
 - `+` - Addition

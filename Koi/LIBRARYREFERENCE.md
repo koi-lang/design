@@ -5,10 +5,6 @@ Methods not marked as overridable can't be overrided.
 
 ## Core
 ### Functions
-- `print` - Prints given data
-- `println` - Prints given data and a newline
-- `input` - Accepts user input
-- `inputln` - Accepts user input and adds a newline
 - `int` - Converts type to an integer
 - `str` - Converts type to a string
 - `cha` - Converts type to a char
@@ -55,6 +51,25 @@ An array is a multitude of values.
 
 ## Standard
 ### Sandbox
+### Console
+**Functions:**
+- `print` - Prints given data.
+    - Parameters:
+        - `args` - Object: The objects to print.
+    - Returns: None
+- `println` - Prints given data and a newline.
+    - Parameters:
+        - `args` - Object: The objects to print.
+    - Returns: None
+- `input` - Accepts user input.
+    - Parameters:
+        - `limit` - Integer: The limit of characters accepted by the input.
+    - Returns: String
+- `inputln` - Accepts user input and adds a newline.
+    - Parameters:
+        - `limit` - Integer: The limit of characters accepted by the input.
+    - Returns: String
+- `clear` - Clears the terminal.
 ### Math
 **Functions:**
 - `ceili`
