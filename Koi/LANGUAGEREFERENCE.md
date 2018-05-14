@@ -29,6 +29,8 @@ The language reference for the Koi language.
 - `pass` - Pass
 - `return` - Return
 - `continue` - Continue
+- `readly` - Read-Only
+- `writely` - Write-Only
 
 ## Symbols
 - `+` - Addition
