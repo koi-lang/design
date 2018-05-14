@@ -65,37 +65,40 @@ The language reference for the Koi language.
 - `>` - More Than/Return Type
 - `^` - Throw Error
 - `:` - Type Assignment/Ratio
+- `->` - Return Type
 - `£` - Pounds
 - `$` - Dollars
 - `€` - Euros
 
 ## File Extensions
 Koi, unlike other languages, uses different file extensions for its' files. Different extensions are not needed, but are there to help identify what the file contains before it is opened.
-- `kd` - Koi Document (any piece of code outside of a class, function, etc, or multiple types, a function and a class)
-- `ks` - Koi Sub-Routine (optionally used instead of specific sub-routine extensions)
+- `koi` - (used for any piece of code outside of a class, function, etc, or multiple types; a function and a class)
+- `ks` - Koi Script
 - `kp` - Koi Procedure (used for files that contain just a procedure)
 - `kf` - Koi Function (used for files that contain just a function)
 - `kc` - Koi Class (used for files that contain just a class)
-- `kr` - Koi Reference (used for for out-of-code documentation)
+- `ko` - Koi Object (used for files that contain just an object)
+- `kr` - Koi Reference (used for out-of-code documentation)
+- `kl` - Koi Library (used for libraries)
 
 ## Sub-Routines
 ### Procedures
 A procedure is function that works in with the global scope.
 ```
 pro MyProcedure({parameters*}) {block}
-pro MyReturn({parameters*}): {type} {block}
+pro MyReturn({parameters*}) -> {type} {block}
 ```
 ### Functions
 A function can be called with a defined set of parameters. The parameter names, types and optional values are defined with the functions and the values are defined when the function is called.
 ```
 fun MyFunction({parameters*}) {block}
-fun MyReturn({parameters*}): {type} {block}
+fun MyReturn({parameters*}) -> {type} {block}
 ```
 ### Methods
 A method is a function that belongs to a class, they have their own scope but can also work with the class scope.
 ```
 met MyMethod({parameters*}) {block}
-met MyReturn({parameters*}): {type} {block}
+met MyReturn({parameters*}) -> {type} {block}
 ```
 ### Parameters
 Parameters are used in sub-routine declaration and are then used from the sub-routine. The type and default value of a parameter are optional.
