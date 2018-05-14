@@ -1,4 +1,4 @@
-# Koi
+# Koi Library Reference
 The library reference for the Koi language.
 
 Methods not marked as overridable can't be overrided.

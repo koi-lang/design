@@ -1,4 +1,4 @@
-# Koi
+# Koi Language Reference
 The language reference for the Koi language.
 
 ## Keywords
