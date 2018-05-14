@@ -56,6 +56,17 @@ An array is a multitude of values.
 ## Standard
 ### Sandbox
 ### Math
+**Functions:**
+- `ceili`
+    - Description: Finds the ceiling of number.
+    - Parameters:
+        - `number` - Integer: The number to use.
+    - Returns: Float
+- `floor`
+    - Description: Finds the floor of number.
+    - Parameters:
+        - `number` - Integer: The number to use.
+    - Returns: Float
 ### JSON
 ### YAML
 ### XML
@@ -68,13 +79,13 @@ An array is a multitude of values.
 - `currentDate`
     - Parameters:
         - `format` - String: The format to use.
-    - Returns: The current date.
+    - Returns: String
 ### Time
 **Functions:**
 - `currentTime`
     - Parameters:
         - `format` - String: The format to use.
-    - Returns: The current time.
+    - Returns: String
 ### Zip
 ### GZip
 ### Base32
@@ -98,6 +109,9 @@ An array is a multitude of values.
             - Parameters:
                 - `content` - String: The content to log.
         - `warn`
+            - Parameters:
+                - `content` - String: The content to log.
+        - `debug`
             - Parameters:
                 - `content` - String: The content to log.
 ### Event
