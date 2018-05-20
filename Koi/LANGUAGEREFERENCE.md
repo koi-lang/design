@@ -26,6 +26,8 @@ The language reference for the Koi language.
 - `prv` - Private
 - `extern` - External/Static
 - `intern` - Internal/Protected
+- `fin` - Final
+- `const` - Constant
 - `pass` - Pass
 - `return` - Return
 - `continue` - Continue
@@ -66,9 +68,6 @@ The language reference for the Koi language.
 - `^` - Throw Error
 - `:` - Type Assignment/Ratio
 - `->` - Return Type
-- `£` - Pounds
-- `$` - Dollars
-- `€` - Euros
 
 ## File Extensions
 Koi, unlike other languages, uses different file extensions for its' files. Different extensions are not needed, but are there to help identify what the file contains before it is opened.
