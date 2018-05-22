@@ -38,7 +38,7 @@ The language reference for the Koi language.
 ## Symbols
 - `+` - Addition
 - `-` - Subtraction
-- `*` - Multiply/Endless Value Parameter
+- `*` - Multiply
 - `/` - Divide
 - `//` - Float Division
 - `=` - Value Assignment
@@ -50,6 +50,7 @@ The language reference for the Koi language.
 - `~` - Roughly
 - `.` - Object Accessor
 - `..` - Range
+- `...` - Var Args
 - `@` - Reverse Object Accessor/Attributes
 - `"` - Non-Literal String
 - `'` - Literal String
@@ -116,10 +117,10 @@ A default value for the parameter can be defined, either on its' own or with the
 {id} = {default value}
 {id}: {type} = {default value}
 ```
-The last parameter may also have an asterisk before the ID, making that parameter into a list of the given type. The parameter will now no longer be able to accept a default value. The function call will now accept an endless amount of values, with the extra values being passed into the parameter with an asterisk.
+The last parameter may also have an ellipsis after the ID, making that parameter into a list of the given type. The parameter will now no longer be able to accept a default value. The function call will now accept an endless amount of values, with the extra values being passed into the parameter with an ellipsis.
 ```
-*{id}
-*{id}: {type}
+{id}...
+{id}...: {type}
 ```
 
 ## Classes
