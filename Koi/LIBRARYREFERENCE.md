@@ -82,6 +82,16 @@ An array is a multitude of values.
     - Parameters:
         - `number` - Integer: The number to use.
     - Returns: Float
+### Mathcro
+An extension to the math library that adds useful macros.
+- Power Of
+    - Description: Works out the power of the given value.
+    - Syntax: `{ID/numeric}^{numeric}`
+    - Returns: Float
+- Coefficient
+    - Descriptions: Finds the given value multiplied by the given number.
+    - Syntax: `{numeric}{ID}`
+    - Returns: Float
 ### JSON
 ### YAML
 ### XML
