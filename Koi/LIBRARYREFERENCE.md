@@ -73,15 +73,70 @@ An array is a multitude of values.
 ### Math
 **Functions:**
 - `ceili`
-    - Description: Finds the ceiling of number.
+    - Description: Finds the ceiling of a given number.
     - Parameters:
         - `number` - Integer: The number to use.
     - Returns: Float
 - `floor`
-    - Description: Finds the floor of number.
+    - Description: Finds the floor of a given number.
     - Parameters:
         - `number` - Integer: The number to use.
     - Returns: Float
+- `round`
+    - Description: Rounds the given number.
+    - Parameters:
+        - `number` - Float: The number to use.
+    - Returns: Integer
+- `abs`
+    - Description: Finds the absolute value of a given number.
+    - Parameters:
+        - `number` - Float: The number to use.
+    - Returns: Float
+- `sin`
+    - Description: Finds the sine of a given number.
+    - Parameters:
+        - `number` - Float: The number to use.
+    - Returns: Float
+- `cos`
+    - Description: Finds the cosine of a given number.
+    - Parameters:
+        - `number` - Float: The number to use.
+    - Returns: Float
+- `exp`
+    - Description: Finds the exponential of a given number.
+    - Parameters:
+        - `number` - Float: The number to use.
+    - Returns: Float
+- `log`
+    - Description: Finds the logarithm of a given number.
+    - Parameters:
+        - `number` - Float: The number to use.
+    - Returns: Float
+- `sqr`
+    - Description: Finds the square of a given number.
+    - Parameters:
+        - `number` - Float: The number to use.
+    - Returns: Float
+- `cube`
+    - Description: Finds the cube of a given number.
+    - Parameters:
+        - `number` - Float: The number to use.
+    - Returns: Float
+- `sqrt`
+    - Description: Finds the square root of a given number.
+    - Parameters:
+        - `number` - Float: The number to use.
+    - Returns: Float
+- `odd`
+    - Description: Checks if the given number is odd.
+    - Parameters:
+        - `number` - Integer: The number to use.
+    - Returns: Boolean
+- `even`
+    - Description: Checks if the given number is even.
+    - Parameters:
+        - `number` - Integer: The number to use.
+    - Returns: Boolean
 ### Mathcro
 An extension to the math library that adds useful macros.
 - Power Of
@@ -101,13 +156,13 @@ An extension to the math library that adds useful macros.
 ### Regex
 ### Date
 **Functions:**
-- `currentDate`
+- `current_date`
     - Parameters:
         - `format` - String: The format to use.
     - Returns: String
 ### Time
 **Functions:**
-- `currentTime`
+- `current_time`
     - Parameters:
         - `format` - String: The format to use.
     - Returns: String
@@ -123,22 +178,20 @@ An extension to the math library that adds useful macros.
 ### Image
 ### Sound
 ### Logging
-**Classes:**
-- `Logger`
-    - Methods:
-        - `log`
-            - Parameters:
-                - `content` - String: The content to log.
-                - `type` - String: The kind of log this is.
-        - `info`
-            - Parameters:
-                - `content` - String: The content to log.
-        - `warn`
-            - Parameters:
-                - `content` - String: The content to log.
-        - `debug`
-            - Parameters:
-                - `content` - String: The content to log.
+**Functions:**
+- `log`
+    - Parameters:
+        - `content` - String: The content to log.
+        - `type` - String: The kind of log this is.
+- `info`
+    - Parameters:
+        - `content` - String: The content to log.
+- `warn`
+    - Parameters:
+        - `content` - String: The content to log.
+- `debug`
+    - Parameters:
+        - `content` - String: The content to log.
 ### Event
 **Classes:**
 - `EventCreator`

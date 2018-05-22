@@ -77,6 +77,7 @@ Koi, unlike other languages, uses different file extensions for its' files. Diff
 - `kf` - Koi Function (used for files that contain just a function)
 - `kc` - Koi Class (used for files that contain just a class)
 - `ko` - Koi Object (used for files that contain just an object)
+- `km` - Koi Macro (used for files that contain just a macro)
 - `kr` - Koi Reference (used for out-of-code documentation)
 - `kl` - Koi Library (used for libraries)
 
