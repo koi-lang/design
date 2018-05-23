@@ -21,7 +21,7 @@ The language reference for the Koi language.
 - `pro` - Procedure
 - `meth` - Method
 - `class` - Class
-- `object` - Object
+- `single` - Singleton
 - `pub` - Public
 - `prv` - Private
 - `extern` - External/Static
@@ -31,9 +31,8 @@ The language reference for the Koi language.
 - `pass` - Pass
 - `return` - Return
 - `continue` - Continue
-- `readly` - Read-Only
-- `writely` - Write-Only
-- `magic` - Magic
+- `magic` - Magic (things that exist in the compiler/interpreter)
+- `native` - Native (something wrapping C code)
 
 ## Symbols
 - `+` - Addition
@@ -65,7 +64,7 @@ The language reference for the Koi language.
 - `!=` - Not Equal To
 - `!` - Not/Ignores Keyword
 - `<` - Less Than
-- `>` - More Than/Return Type
+- `>` - More Than
 - `^` - Throw Error
 - `:` - Type Assignment/Ratio
 - `->` - Return Type
@@ -73,11 +72,10 @@ The language reference for the Koi language.
 ## File Extensions
 Koi, unlike other languages, uses different file extensions for its' files. Different extensions are not needed, but are there to help identify what the file contains before it is opened.
 - `koi` - (used for any piece of code outside of a class, function, etc, or multiple types; a function and a class)
-- `ks` - Koi Script
 - `kp` - Koi Procedure (used for files that contain just a procedure)
 - `kf` - Koi Function (used for files that contain just a function)
 - `kc` - Koi Class (used for files that contain just a class)
-- `ko` - Koi Object (used for files that contain just an object)
+- `ks` - Koi Singleton (used for files that contain just a singleton)
 - `km` - Koi Macro (used for files that contain just a macro)
 - `kr` - Koi Reference (used for out-of-code documentation)
 - `kl` - Koi Library (used for libraries)
