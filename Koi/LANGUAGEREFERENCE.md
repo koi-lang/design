@@ -1,33 +1,35 @@
 # Koi Language Reference
 The language reference for the Koi language.
 
+We use 3 character abbreviation for types and members.
+
 ## Keywords
 - `true` - Boolean
 - `false` - Boolean
 - `var` - Variable Assignment
+- `con` - Constant
 - `none` - Nothing
-- `cha` - Character
+- `chr` - Character
 - `str` - String
 - `int` - Integer
 - `flo` - Float
 - `boo` - Bool
 - `if` - If
-- `elf` - Else If
+- `elif` - Else If
 - `else` - Else
 - `for` - For
 - `in` - In
 - `while` - While
 - `fun` - Function
 - `pro` - Procedure
-- `meth` - Method
-- `class` - Class
+- `met` - Method
+- `cls` - Class
 - `single` - Singleton
-- `pub` - Public
-- `prv` - Private
+- `public` - Public
+- `prvate` - Private
 - `extern` - External/Static
 - `intern` - Internal/Protected
-- `fin` - Final
-- `const` - Constant
+- `final` - Final
 - `pass` - Pass
 - `return` - Return
 - `continue` - Continue
@@ -136,21 +138,21 @@ val myVal: {type} = {value}
 
 ## Statements
 ### If
-An if statement is used to compare values with others. An if statement can optionally be followed by an elf and/or else statements.
+An if statement is used to compare values with others. An if statement can optionally be followed by an elif and/or else statements.
 ```
 if ({boolean}) {}
 ```
-#### Elf
-An elf statement can only follow an if statement, and is run if the comparison in the if statement is false, but its' comparison is true.
+#### Elif
+An elif statement can only follow an if statement, and is run if the comparison in the if statement is false, but its' comparison is true.
 ```
 if (...) {}
-elf ({boolean}) {}
+elif ({boolean}) {}
 ```
 #### Else
-An else statement can only follow an if or elf statement, and is run if the comparison in the if or elf statements were false.
+An else statement can only follow an if or elif statement, and is run if the comparison in the if or elif statements were false.
 ```
 if (...) {}
-elf (...) {}
+elif (...) {}
 else {}
 ```
 
