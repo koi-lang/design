@@ -11,7 +11,6 @@ The version scheme is based on semantic versioning; major, minor, patch.
 - Characters
 - Integers
 - Strings
-- Arrays
 - Objects
 - References
 - Values
@@ -23,11 +22,12 @@ The version scheme is based on semantic versioning; major, minor, patch.
 - While Loops
 - Print Functions
 - Input Functions
+- Procedures
 
 #### Might contain:
-- Procedures
 - Functions
 - Imports
+- Arrays
 
 ## Koi \~.\~.0
 #### Will contain:

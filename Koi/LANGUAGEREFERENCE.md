@@ -12,14 +12,14 @@ The language reference for the Koi language.
 - `flo` - Float
 - `boo` - Bool
 - `if` - If
-- `elf` - Else If
+- `elf` - Else If - Using the keyword "elf" for "else if" layers the if statement in a staircase-like fashion.
 - `else` - Else
 - `for` - For
 - `in` - In
 - `while` - While
 - `fun` - Function
 - `pro` - Procedure
-- `meth` - Method
+- `meth` - Method - Methods exist only with-in classes, so the keyword uses 4 letters to distance it from functions and procedures.
 - `class` - Class
 - `single` - Singleton
 - `pub` - Public
@@ -96,8 +96,8 @@ fun MyReturn({parameters*}) -> {type} {block}
 ### Methods
 A method is a function that belongs to a class, they have their own scope but can also work with the class scope.
 ```
-met MyMethod({parameters*}) {block}
-met MyReturn({parameters*}) -> {type} {block}
+meth MyMethod({parameters*}) {block}
+meth MyReturn({parameters*}) -> {type} {block}
 ```
 ### Parameters
 Parameters are used in sub-routine declaration and are then used from the sub-routine. The type and default value of a parameter are optional.
