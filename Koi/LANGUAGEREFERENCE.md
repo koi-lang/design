@@ -4,7 +4,8 @@ The language reference for the Koi language.
 ## Keywords
 - `true` - Boolean
 - `false` - Boolean
-- `var` - Variable Assignment
+- `var` - Variable Assignment Initiation
+- `val` - Final Variable Assignment Initiation
 - `none` - Nothing
 - `cha` - Character
 - `str` - String
@@ -31,6 +32,7 @@ The language reference for the Koi language.
 - `pass` - Pass
 - `return` - Return
 - `continue` - Continue
+- `del` - Delete (deletes an object in the current scope)
 - `magic` - Magic (things that exist in the compiler/interpreter)
 - `native` - Native (something wrapping C code)
 
@@ -41,6 +43,7 @@ The language reference for the Koi language.
 - `/` - Divide
 - `//` - Float Division
 - `=` - Value Assignment
+- `:=` - Inferred Type Value Assignment
 - `=+` - Equals Plus
 - `=-` - Equals Minus
 - `=*` - Equals Multiply
@@ -128,10 +131,15 @@ class MyClass({extensions*}) {block}
 ```
 
 ## Variables
-Variables are names that are attached to values. The variables available depend on the current scope. Variables can be defined as mutable with "`var`" or as final with "`val`". The type and value of the variable is optional (variables will equal `none` if not given a value).
+Variables are names that are attached to values. The variables available depend on the current scope. Variables can be defined as mutable with "`var`" or as final with "`val`".
 ```
-var myVar: {type} = {value}
-val myVal: {type} = {value}
+var my_var: {type} = {value}
+val my_val: {type} = {value}
+```
+The value of the variable is optional, if not specified, it will be "none" or the smallest it could be for the specified type - 0 for an integer. The type, however, must either be specified or the following syntax must be used:
+```
+var my_var := {value}
+val my_val := {value}
 ```
 
 ## Statements
@@ -149,6 +157,9 @@ elf ({boolean}) {}
 #### Else
 An else statement can only follow an if or elf statement, and is run if the comparison in the if or elf statements were false.
 ```
+if (...) {}
+else {}
+
 if (...) {}
 elf (...) {}
 else {}
