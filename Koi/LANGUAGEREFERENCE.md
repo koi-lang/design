@@ -4,14 +4,15 @@ The language reference for the Koi language.
 ## Keywords
 - `true` - Boolean
 - `false` - Boolean
-- `var` - Variable Assignment Initiation
-- `val` - Final Variable Assignment Initiation
+- `var` - Mutable Variable Assignment Initiation
+- `val` - Immutable Variable Assignment Initiation
 - `none` - Nothing
 - `cha` - Character
 - `str` - String
 - `int` - Integer
 - `flo` - Float
-- `boo` - Bool
+- `boo` - Boolean
+- `dyn` - Dynamic
 - `if` - If
 - `elf` - Else If - Using the keyword "elf" for "else if" layers the if statement in a staircase-like fashion.
 - `else` - Else
@@ -22,7 +23,7 @@ The language reference for the Koi language.
 - `pro` - Procedure
 - `meth` - Method - Methods exist only with-in classes, so the keyword uses 4 letters to distance it from functions and procedures.
 - `class` - Class
-- `single` - Singleton
+- `object` - Object
 - `pub` - Public
 - `prv` - Private
 - `extern` - External/Static
@@ -35,6 +36,8 @@ The language reference for the Koi language.
 - `del` - Delete (deletes an object in the current scope)
 - `magic` - Magic (things that exist in the compiler/interpreter)
 - `native` - Native (something wrapping C code)
+- `import` - Import
+- `from` - From
 
 ## Symbols
 - `+` - Addition
@@ -53,7 +56,8 @@ The language reference for the Koi language.
 - `.` - Object Accessor
 - `..` - Range
 - `...` - Var Args
-- `@` - Reverse Object Accessor/Attributes
+- `@` - Reverse Object Accessor/Attribute On
+- `@!` - Attribute Off
 - `"` - Non-Literal String
 - `'` - Literal String
 - Backtick - Multi-line String
@@ -75,32 +79,42 @@ The language reference for the Koi language.
 ## File Extensions
 Koi, unlike other languages, uses different file extensions for its' files. Different extensions are not needed, but are there to help identify what the file contains before it is opened.
 - `koi` - (used for any piece of code outside of a class, function, etc, or multiple types; a function and a class)
+- `ks` - Koi Subroutine (used for files that contain just a subroutine)
 - `kp` - Koi Procedure (used for files that contain just a procedure)
 - `kf` - Koi Function (used for files that contain just a function)
 - `kc` - Koi Class (used for files that contain just a class)
-- `ks` - Koi Singleton (used for files that contain just a singleton)
+- `ko` - Koi Object (used for files that contain just a singleton)
 - `km` - Koi Macro (used for files that contain just a macro)
 - `kr` - Koi Reference (used for out-of-code documentation)
 - `kl` - Koi Library (used for libraries)
 
 ## Sub-Routines
-### Procedures
-A procedure is function that works in with the global scope.
+All of the sub-routines can be called like so:
 ```
-pro MyProcedure({parameters*}) {block}
-pro MyReturn({parameters*}) -> {type} {block}
+{id}({parameters*})
+```
+## Subroutine
+A subroutine is a function that works in the global scope.
+```
+sub mySubroutine({parameters*}) {block}
+sub mySubroutine({parameters*}) -> {type} {block}
+```
+### Procedures
+A procedure is a function that does not have a return value. Procedures lack the ability to return anything, so an error will be raised if a variable is assigned to a procedure call.
+```
+pro myProcedure({parameters*}) {block}
 ```
 ### Functions
-A function can be called with a defined set of parameters. The parameter names, types and optional values are defined with the functions and the values are defined when the function is called.
+A function can be called with a defined set of parameters. The parameter names, types and optional values are defined with the functions and the values are defined when the function is called. If the return type is not specified, it will be "none".
 ```
-fun MyFunction({parameters*}) {block}
-fun MyReturn({parameters*}) -> {type} {block}
+fun myFunction({parameters*}) {block}
+fun myReturn({parameters*}) -> {type} {block}
 ```
 ### Methods
 A method is a function that belongs to a class, they have their own scope but can also work with the class scope.
 ```
-meth MyMethod({parameters*}) {block}
-meth MyReturn({parameters*}) -> {type} {block}
+meth myMethod({parameters*}) {block}
+meth myReturn({parameters*}) -> {type} {block}
 ```
 ### Parameters
 Parameters are used in sub-routine declaration and are then used from the sub-routine. The type and default value of a parameter are optional.
@@ -108,20 +122,30 @@ Parameters are used in sub-routine declaration and are then used from the sub-ro
 The most basic form of a parameter is just an ID.
 ```
 {id}
+
+my_id
 ```
 However, the type of the parameter may also be specified.
 ```
 {id}: {type}
+
+my_id: str
 ```
 A default value for the parameter can be defined, either on its' own or with the type.
 ```
-{id} = {default value}
+{id} := {default value}
 {id}: {type} = {default value}
+
+my_id := "string"
+my_id: str = "string"
 ```
 The last parameter may also have an ellipsis after the ID, making that parameter into a list of the given type. The parameter will now no longer be able to accept a default value. The function call will now accept an endless amount of values, with the extra values being passed into the parameter with an ellipsis.
 ```
 {id}...
-{id}...: {type}
+{id}: {type}...
+
+my_id...
+my_id: str...
 ```
 
 ## Classes
