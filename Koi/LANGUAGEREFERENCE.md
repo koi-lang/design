@@ -19,6 +19,7 @@ The language reference for the Koi language.
 - `for` - For
 - `in` - In
 - `while` - While
+- `sub` - Subroutine
 - `fun` - Function
 - `pro` - Procedure
 - `meth` - Method - Methods exist only with-in classes, so the keyword uses 4 letters to distance it from functions and procedures.
@@ -110,12 +111,9 @@ Multi-line comments can also be created, starting with a number sign then a dash
 - String
 
 ### Collections
-- TypedList
-- DynamicList
-- TypedTuple
-- DynamicTuple
-- TypedSet
-- DynamicSet
+- List
+- Tuple
+- Set
 - Dictionary
 
 Examples:
@@ -124,19 +122,37 @@ var integer: int = 0
 # Or
 var integer := 0
 
-var integer_list: int[] = [0, 1, 2]
-# Or
-var integer_list := [0, 1, 2]
+###
 
-var integer_tuple: int() = (0, 1, 2)
+var integer_list: int[] = [0, 1, 2] # Integer only list
 # Or
-var integer_tuple := (0, 1, 2)
+var integer_list := [0, 1, 2] # Integer only list
 
-var integer_set: int{} = {0, 1, 2}
+var generic_list: list = [0, "1", 2] # Object list (any type)
 # Or
-var integer_set := {0, 1, 2}
+var generic_list := [0, "1", 2] # Object list (any type)
+
+###
+
+var integer_tuple: int() = (0, 1, 2) # Integer only tuple
+# Or
+var integer_tuple := (0, 1, 2) # Integer only tuple
+
+var generic_tuple: tuple = (0, "1", 2) # Object tuple (any type)
+# Or
+var generic_tuple := (0, "1", 2) # Object tuple (any type)
+
+###
+
+var integer_set: int{} = {0, 1, 2} # Integer only set
+# Or
+var integer_set := {0, 1, 2} # Integer only set
+
+var generic_set: set = {0, "1", 2} # Object set (any type)
+# Or
+var generic_set := {0, "1", 2} # Object set (any type)
 ```
-The length of the list, tuple or set can be specified by putting the number between the brackets.
+The length of the list, tuple or set can be specified by putting the number between the brackets. If a length is not specified, the list will be dynamically sized.
 ```
 var integer_list: int[3] = [0, 1, 2]
 # var integer_list: int[3] = [0, 1, 2, 3] # Error - list contains more than 3 items
