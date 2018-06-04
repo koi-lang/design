@@ -4,21 +4,7 @@ The library reference for the Koi language.
 Methods not marked as overridable can't be overrided.
 
 ## Core
-### Functions
-- `int` - Converts type to an integer
-- `str` - Converts type to a string
-- `cha` - Converts type to a char
-- `flo` - Converts type to a float
-- `boo` - Converts type to a bool
 ### Types
-#### Value
-A value is an object that contains its' own value.
-
-**Extends From:** Object
-#### Reference
-A reference is an object that contains a reference to a value.
-
-**Extends From:** Object
 #### Object
 The object is default type of any class. Every class extends from Object.
 

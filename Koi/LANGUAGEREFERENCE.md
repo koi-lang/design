@@ -40,6 +40,9 @@ The language reference for the Koi language.
 - `from` - From
 
 ## Symbols
+- `#` - Comment
+- `#-` - Begin Multi-line Comment
+- `-#` - End Multi-line Comment
 - `+` - Addition
 - `-` - Subtraction
 - `*` - Multiply
@@ -87,6 +90,57 @@ Koi, unlike other languages, uses different file extensions for its' files. Diff
 - `km` - Koi Macro (used for files that contain just a macro)
 - `kr` - Koi Reference (used for out-of-code documentation)
 - `kl` - Koi Library (used for libraries)
+
+## Comments
+Like most languages, comments can be made in Koi, that will be ignored by the interpreter/compiler. Comments are created with a number sign.
+```
+# I'm a comment
+```
+Multi-line comments can also be created, starting with a number sign then a dash and finishing with a dash then a number sign.
+```
+#- I'm
+   a multi-line
+   comment
+-#
+```
+## Types
+- Boolean
+- Integer
+- Character
+- String
+
+### Collections
+- TypedList
+- DynamicList
+- TypedTuple
+- DynamicTuple
+- TypedSet
+- DynamicSet
+- Dictionary
+
+Examples:
+```
+var integer: int = 0
+# Or
+var integer := 0
+
+var integer_list: int[] = [0, 1, 2]
+# Or
+var integer_list := [0, 1, 2]
+
+var integer_tuple: int() = (0, 1, 2)
+# Or
+var integer_tuple := (0, 1, 2)
+
+var integer_set: int{} = {0, 1, 2}
+# Or
+var integer_set := {0, 1, 2}
+```
+The length of the list, tuple or set can be specified by putting the number between the brackets.
+```
+var integer_list: int[3] = [0, 1, 2]
+# var integer_list: int[3] = [0, 1, 2, 3] # Error - list contains more than 3 items
+```
 
 ## Sub-Routines
 All of the sub-routines can be called like so:
