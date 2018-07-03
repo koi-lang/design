@@ -7,11 +7,11 @@ The language reference for the Koi language.
 - `var` - Mutable Variable Assignment Initiation
 - `val` - Immutable Variable Assignment Initiation
 - `none` - Nothing
-- `cha` - Character
+- `char` - Character
 - `str` - String
 - `int` - Integer
-- `flo` - Float
-- `boo` - Boolean
+- `float` - Float
+- `bool` - Boolean
 - `dyn` - Dynamic
 - `if` - If
 - `elf` - Else If - Using the keyword "elf" for "else if" layers the if statement in a staircase-like fashion.
@@ -51,11 +51,11 @@ The language reference for the Koi language.
 - `//` - Float Division
 - `=` - Value Assignment
 - `:=` - Inferred Type Value Assignment
-- `=+` - Equals Plus
-- `=-` - Equals Minus
-- `=*` - Equals Multiply
-- `=/` - Equals Divide
-- `=//` - Equals Float Divide
+- `+=` - Equals Plus
+- `-=` - Equals Minus
+- `*=` - Equals Multiply
+- `/=` - Equals Divide
+- `//=` - Equals Float Divide
 - `~` - Roughly
 - `.` - Object Accessor
 - `..` - Range
@@ -70,8 +70,6 @@ The language reference for the Koi language.
 - `==` - Equal To
 - `<=` - Less Than Or Equal To
 - `>=` - More Than Or Equal To
-- `<>` - Less Than Or More Than
-- `<=>` - Less Than Or Equal To Or More Than
 - `!=` - Not Equal To
 - `!` - Not/Ignores Keyword
 - `<` - Less Than
@@ -79,6 +77,7 @@ The language reference for the Koi language.
 - `^` - Throw Error
 - `:` - Type Assignment/Ratio
 - `->` - Return Type
+- `&` - Annotation
 
 ## File Extensions
 Koi, unlike other languages, uses different file extensions for its' files. Different extensions are not needed, but are there to help identify what the file contains before it is opened.
@@ -91,6 +90,9 @@ Koi, unlike other languages, uses different file extensions for its' files. Diff
 - `km` - Koi Macro (used for files that contain just a macro)
 - `kr` - Koi Reference (used for out-of-code documentation)
 - `kl` - Koi Library (used for libraries)
+- `kac` - Koi Abstract Class (used for files that contain just an abstract class)
+- `kat` - Koi Attribute (used for files that contain just a compiler attribute)
+- `kan` - Koi Annotation (used for classes that contain just an annotation)
 
 ## Comments
 Like most languages, comments can be made in Koi, that will be ignored by the interpreter/compiler. Comments are created with a number sign.
@@ -105,16 +107,19 @@ Multi-line comments can also be created, starting with a number sign then a dash
 -#
 ```
 ## Types
-- Boolean
-- Integer
-- Character
-- String
+- Boolean - A value that can be on or off
+- Integer - A whole number
+- Float - A floating point number
+- Double - A double precise float
+- Character - A single character
+- String - An array of characters
+- Array - An amount of the same type of value
 
 ### Collections
-- List
-- Tuple
-- Set
-- Dictionary
+- List - A sorted amount of different types of values
+- Tuple - An immutable sorted amount of different types of values
+- Set - A set of values, where a value may only be used once
+- Dictionary - A set of key/value pairs of data
 
 Examples:
 ```
@@ -144,13 +149,23 @@ var generic_tuple := (0, "1", 2) # Object tuple (any type)
 
 ###
 
-var integer_set: int{} = {0, 1, 2} # Integer only set
+var integer_dict: int{} = {"0": 0, "1": 1, "2": 2} # Integer only set
 # Or
-var integer_set := {0, 1, 2} # Integer only set
+var integer_dict := {"0": 0, "1": 1, "2": 2} # Integer only set
 
-var generic_set: set = {0, "1", 2} # Object set (any type)
+var generic_dict: dict = {"0": 0, "1": "1", "2": 2} # Object set (any type)
 # Or
-var generic_set := {0, "1", 2} # Object set (any type)
+var generic_dict := {"0": 0, "1": "1", "2": 2} # Object set (any type)
+
+###
+
+var integer_set: int<> = <0, 1, 2> # Integer only set
+# Or
+var integer_set := <0, 1, 2> # Integer only set
+
+var generic_set: set = <0, "1", 2> # Object set (any type)
+# Or
+var generic_set := <0, "1", 2> # Object set (any type)
 ```
 The length of the list, tuple or set can be specified by putting the number between the brackets. If a length is not specified, the list will be dynamically sized.
 ```
@@ -240,22 +255,22 @@ val my_val := {value}
 ### If
 An if statement is used to compare values with others. An if statement can optionally be followed by an elf and/or else statements.
 ```
-if ({boolean}) {}
+if {boolean} {}
 ```
 #### Elf
 An elf statement can only follow an if statement, and is run if the comparison in the if statement is false, but its' comparison is true.
 ```
-if (...) {}
-elf ({boolean}) {}
+if ... {}
+elf {boolean} {}
 ```
 #### Else
 An else statement can only follow an if or elf statement, and is run if the comparison in the if or elf statements were false.
 ```
-if (...) {}
+if ... {}
 else {}
 
-if (...) {}
-elf (...) {}
+if ... {}
+elf ... {}
 else {}
 ```
 
@@ -263,16 +278,16 @@ else {}
 ### For
 For loops will loop for as long as there is another item in the given object with length, the value of the given id will be set to the value of the current item in the object with length.
 ```
-for ({id} in {object with length}) {}
+for {id} in {object with length} {}
 ```
 For loops can also be used to loop through multiple things, using commas for each loop.
 ```
-for ({id} in {object with length}, {id} in {object with length}) {}
+for {id} in {object with length}, {id} in {object with length} {}
 ```
 ### While
 A while loop will loop for as long as the comparison is true. As soon as it isn't, the loop will stop.
 ```
-while ({boolean}) {}
+while {boolean} {}
 ```
 
 ## Operators
