@@ -11,32 +11,28 @@ The object is default type of any class. Every class extends from Object.
 **Extends From:** Nothing
 
 **Methods:**
-- `to{core type}` - Converts the type to the given core type (overridable)
-- `as{core type}` - Returns the type as the given core type
+- `to{core type}` - Converts the type to the given core type
+- `as{core type}` - Returns the type as the given core type (overridable)
 #### Boolean
 A boolean object is either true or false, and is returned from comparison operations.
-
-**Extends From:** Value
 
 **Methods:**
 - `flip` - Changes the boolean to the opposite value (true -> false, false -> true)
 #### Character
 A character is a string-like object that contains a singular character.
 
-**Extends From:** Value
 #### Integer
 An integer is a full numeric value.
 
-**Extends From:** Value
 #### String
 A string is an array of characters.
 
-**Extends From:** Reference
 #### Array
 An array is a multitude of values.
 
 ## Standard
 ### Sandbox
+The sandbox library provides a limited Koi interpreter to evaluate expressions with. 
 ### Console
 **Functions:**
 - `print` - Prints given data.
@@ -137,16 +133,22 @@ An extension to the math library that adds useful macros.
 ### YAML
 ### XML
 ### Random
+The random library provides different subroutines for generating pseudo-random numbers based on different methods.
 ### OS
+The OS library provides variables and subroutines to interact with the operating system and retrieve information from it.
 ### IO
 ### Regex
 ### Date
+The date library provides subroutines for date related tasks.
+
 **Functions:**
 - `current_date`
     - Parameters:
         - `format` - String: The format to use.
     - Returns: String
 ### Time
+The time library provides subroutines for time related tasks.
+
 **Functions:**
 - `current_time`
     - Parameters:
@@ -184,3 +186,4 @@ An extension to the math library that adds useful macros.
 - `EventListener`
 ### Build
 ### Threading
+The threading library provides ways to run different tasks on different threads.

@@ -12,6 +12,7 @@ The language reference for the Koi language.
 - `int` - Integer
 - `float` - Float
 - `bool` - Boolean
+- `byte` - Byte
 - `dyn` - Dynamic
 - `if` - If
 - `elf` - Else If - Using the keyword "elf" for "else if" layers the if statement in a staircase-like fashion.
